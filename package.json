@@ -24,6 +24,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "@vitejs/plugin-vue": "^6.0.1",
+    "daisyui": "^5.5.3",
     "prettier": "3.6.2",
     "tailwindcss": "^4.1.16",
     "vite": "^7.1.11",

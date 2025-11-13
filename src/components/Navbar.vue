@@ -26,13 +26,7 @@ export default {
 
 <template>
   <nav
-    class="fixed z-50 flex items-center justify-between 
-            glass-nav rounded-full border border-white/40 
-            shadow-[0_8px_30px_rgba(55,160,175,0.3)] 
-            p-3 w-[95%] max-w-[1500px]
-            left-1/2 -translate-x-1/2 top-4
-            transition-all duration-500 ease-in-out
-            backdrop-blur-[100px] bg-white/30
+    class="fixed z-50 flex items-center justify-between glass navbar-style rounded-full shadow-[0_8px_30px_rgba(55,160,175,0.3)] p-3 w-[95%] max-w-[1500px] left-1/2 -translate-x-1/2 top-4 transition-all duration-500 ease-in-out
             max-[1060px]:bottom-4 max-[1060px]:top-auto 
             max-[1060px]:rounded-full max-[1060px]:py-5 px-7
             max-[1060px]:w-[95%] max-[1060px]:justify-center"
