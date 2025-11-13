@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Tropiline Normal';
+  src: url('/src/assets/fonts/tropiline/Tropiline-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tropiline Bold';
+  src: url('/src/assets/fonts/tropiline/Tropiline-Bold.otf') format('opentype');
+  font-weight: Bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tropiline SemiBold';
+  src: url('/src/assets/fonts/tropiline/Tropiline-SemiBold.otf') format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tropiline LogoOnly';
+  src: url('/src/assets/fonts/tropiline/Tropiline-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.logo-text {
+  font-family: 'Tropiline LogoOnly';
+  color: #306067;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  font-weight: bolder;
+}
+
+.header-bg {
+  background-image: url('/src/assets/img/bg2.jpg'); 
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;         
+  display: flex;                
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-family: 'Tropiline Bold';
+}
+h2{
+  font-family: 'Tropiline SemiBold';
+}
+h3, h4, h5, h6{
+  font-family: 'Tropiline Normal';
+}
+
+button{
+  font-family: 'Tropiline SemiBold';
+}
+
+/* === TESTS VIEW === */
+
+/* Efecto glass para los tests completados */
+.done-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  pointer-events: none;
+}
+
+.TestCard {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-height: 500px;
+}
+
+.TestCard:hover {
+  transform: scale(1.02);
+}
+
+/* Imagen para test de piel */
+.card-piel {
+  background-image: url('./assets/img/portada_test_piel.png');
+}
+
+/* Imagen para test de cabello */
+.card-cabello {
+  background-image: url('./assets/img/portada_test_cabello.png');
+}
+
+
+/* Responsividad: las imágenes se adaptan sin deformarse */
+@media (max-width: 768px) {
+  .TestCard {
+    background-position: center;
+    background-size: cover;
+  }
+}
