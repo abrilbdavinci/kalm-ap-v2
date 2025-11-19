@@ -21,7 +21,6 @@ export default {
 
 <template>
   <section class="max-w-6xl flex flex-col items-center mx-auto">
-    <h1>tendrìamos que dirigir al login directo?</h1>
 
   </section>
 </template>
