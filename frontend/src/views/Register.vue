@@ -4,13 +4,13 @@
     <div class="w-full h-130 mx-auto mt-5 p-10 bg-white/40 backdrop-blur-lg rounded-xl shadow-lg">
 
       <form @submit.prevent="register" class="flex flex-col gap-3 my-10">
-        <label class="text-start">Nombre</label>
+        <label class="text-start text-[#306067]">Nombre</label>
         <input v-model="name" type="text" class="p-2 rounded-full border" required />
 
-        <label class="text-start">Email</label>
+        <label class="text-start text-[#306067]">Email</label>
         <input v-model="email" type="email" class="p-2 rounded-full border" required />
 
-        <label class="text-start">Contraseña</label>
+        <label class="text-start text-[#306067]">Contraseña</label>
         <input v-model="password" type="password" class="p-2 rounded-full border" required />
 
         <BtnLight type="submit" class="mt-4 w-70 mx-auto">Crear</BtnLight>

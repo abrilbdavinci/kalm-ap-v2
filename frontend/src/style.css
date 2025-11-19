@@ -46,6 +46,7 @@ main p{
 }
 
 body {
+  width: 100vw;
   font-family: 'Mulish', sans-serif;
   font-weight: bolder;
   /*NAVBAR VARIABLES*/
@@ -110,7 +111,6 @@ body {
       box-shadow 400ms cubic-bezier(1, 0, 0.4, 1);
 }
 .navbar-style{
-  position: absolute;
   display: flex;
   align-items: center;
   box-sizing: border-box;

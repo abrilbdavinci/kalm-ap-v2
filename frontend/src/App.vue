@@ -20,7 +20,7 @@ export default {
     <Navbar />
     <main
   class="flex grow container mx-auto
-        px-4 py-22 text-center justify-center"
+        px-4 pb-20 pt-30 text-center justify-center"
 >
 
       <RouterView />

@@ -53,10 +53,10 @@ export default {
       <!-- Usuario no autenticado -->
       <template v-if="!currentUser">
         <RouterLink to="/login">
-          <font-awesome-icon icon="fa-solid fa-right-to-bracket" />
+          <font-awesome-icon icon="fa-solid fa-right-to-bracket" class="text-[#306067]" />
         </RouterLink>
         <RouterLink to="/register">
-          <font-awesome-icon icon="fa-solid fa-user-plus" />
+          <font-awesome-icon icon="fa-solid fa-user-plus" class="text-[#306067]" />
         </RouterLink>
       </template>
 
