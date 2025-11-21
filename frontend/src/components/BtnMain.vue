@@ -2,8 +2,8 @@
   <button
     type="button"
     :disabled="disabled || loading"
-    class="px-5 py-2 rounded-xl pt-3 text-white font-semibold transition hover:opacity-90 disabled:opacity-80 disabled:cursor-not-allowed"
-    :style="{ backgroundColor: '#37A0AF' }"
+    class="px-5 py-3 rounded-xl text-white font-bold transition cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed bg-(--kälm-dark)"
+    style="font-family: 'Mulish';"
   >
     <span v-if="loading">Guardando...</span>
     <span v-else><slot /></span>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "BtnMain",
+  name: "BtnSecondary",
   props: {
     disabled: { type: Boolean, default: false },
     loading: { type: Boolean, default: false },

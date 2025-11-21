@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import TestCard from '../components/TestCard.vue';
 import BtnDark from '../components/BtnDark.vue';
-import BtnLight from '../components/BtnLight.vue';
+import BtnSecondary from '../components/BtnSecondary.vue';
 import BtnMain from '../components/BtnMain.vue';
 import MainTitle from '../components/MainTitle.vue';
 import SubTitle from '../components/SubTitle.vue';
@@ -145,7 +145,7 @@ onMounted(async () => {
       <div
         class="bg-white/20 backdrop-blur-[10px] border border-white/30 rounded-xl shadow-md p-6 w-full max-w-3xl flex flex-col gap-4">
         <!-- Header -->
-        <div class="text-lg font-bold text-[#306067] text-center">
+        <div class="text-lg font-bold text-(--kälm-dark) text-center">
           Pregunta {{ currentQuestion + 1 }}
         </div>
 
@@ -160,7 +160,7 @@ onMounted(async () => {
             @click="selectOption(opt.scoreKey)" :class="[
               'cursor-pointer rounded-full border border-gray-300 text-center transition-colors flex items-center justify-center p-4 min-h-[82px] w-full',
               selectedOptions[currentQuestion]?.scoreKey === opt.scoreKey
-                ? 'bg-[#37A0AF] text-white'
+                ? 'bg-(--kälm-light) text-white'
                 : 'bg-white text-gray-800'
             ]">
             {{ opt.text }}
@@ -172,7 +172,7 @@ onMounted(async () => {
 
       <!-- Navegación -->
       <div class="flex justify-between w-full py-5">
-        <BtnLight class="w-1/3" @click="prevQuestion" :disabled="currentQuestion === 0">Atrás</BtnLight>
+        <BtnSecondary class="w-1/3" @click="prevQuestion" :disabled="currentQuestion === 0">Atrás</BtnSecondary>
         <BtnDark v-if="currentQuestion < test.questions.length - 1" class="w-1/3" @click="nextQuestion"
           :disabled="!isOptionSelected()">Siguiente</BtnDark>
         <BtnMain v-else class="w-1/3" @click="finishTest" :disabled="!isOptionSelected()">Finalizar Test</BtnMain>

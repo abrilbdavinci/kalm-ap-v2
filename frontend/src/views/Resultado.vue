@@ -135,7 +135,7 @@ const guardarResultado = async () => {
     <MainTitle>Resultados del Test</MainTitle>
     <SubTitle>
       <template #header>
-        <span class="text-[#306067] font-extrabold">¡Test terminado!</span>
+        <span class="text-(--kälm-dark) font-extrabold">¡Test terminado!</span>
       </template>
     </SubTitle>
 

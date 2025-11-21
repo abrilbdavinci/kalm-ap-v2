@@ -18,14 +18,14 @@ export default {
         <div class="flex text-left">
                 <ul class="me-15">
                 <li><RouterLink to="/">Inicio</RouterLink></li>
-                <li><RouterLink to="/planes">Planes</RouterLink></li>
-                <li><RouterLink to="/about">Sobre Kälm</RouterLink></li>
-                <li><RouterLink to="/contact">Contacto</RouterLink></li>
+                <li><RouterLink to="/">Planes</RouterLink></li>
+                <li><RouterLink to="/">Sobre Kälm</RouterLink></li>
+                <li><RouterLink to="/">Contacto</RouterLink></li>
                 </ul>
                 <ul>
-                <li><RouterLink to="/equipo">Equipo Kälm</RouterLink></li>
-                <li><RouterLink to="/empleos">Empleos</RouterLink></li>
-                <li><RouterLink to="/blog">Blog</RouterLink></li>
+                <li><RouterLink to="/">Equipo Kälm</RouterLink></li>
+                <li><RouterLink to="/">Empleos</RouterLink></li>
+                <li><RouterLink to="/">Blog</RouterLink></li>
                 </ul>
             </div>
             <div class="flex items-start justify-between flex-col gap-10 mt-8">

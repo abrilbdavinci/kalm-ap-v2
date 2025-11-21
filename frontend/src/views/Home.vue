@@ -1,7 +1,7 @@
 <script>
 import MainTitle from '../components/MainTitle.vue'
 import SubTitle from '../components/SubTitle.vue'
-import BtnLight from '../components/BtnLight.vue'
+import BtnSecondary from '../components/BtnSecondary.vue'
 import BtnDark from '../components/BtnDark.vue'
 import BtnMain from '../components/BtnMain.vue'
 
@@ -12,7 +12,7 @@ export default {
     components: {
         MainTitle,
         SubTitle,
-        BtnLight,
+        BtnSecondary,
         BtnDark,
         BtnMain
     }

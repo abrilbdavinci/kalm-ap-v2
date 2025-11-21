@@ -1,28 +1,27 @@
 <template>
-  <section class="w-3xl">
-    <MainTitle>Crear cuenta</MainTitle>
-    <div class="w-full h-130 mx-auto mt-5 p-10 bg-white/40 backdrop-blur-lg rounded-xl shadow-lg">
-
+  <section class="w-2xl">
+    <img src="../../src/assets/img/logo-kalm.svg" alt="logo Kälm" class="h-25 mx-auto mt-20 mb-5">
+    <div class="w-full h-120 mx-auto mt-5">
       <form @submit.prevent="register" class="flex flex-col gap-3 my-10">
-        <label class="text-start text-[#306067]">Nombre</label>
-        <input v-model="name" type="text" class="p-2 rounded-full border" required />
+        <label class="text-start text-(--kälm-dark) hidden">Nombre</label>
+        <input v-model="name" type="text" placeholder="Nombre" class="text-(--kälm-text) p-3 bg-transparent rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) text-md" required />
 
-        <label class="text-start text-[#306067]">Email</label>
-        <input v-model="email" type="email" class="p-2 rounded-full border" required />
+        <label class="text-start text-(--kälm-dark) hidden">Email</label>
+        <input v-model="email" type="email" placeholder="Email"  class="text-(--kälm-text) p-3 bg-transparent rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) text-md" required />
 
-        <label class="text-start text-[#306067]">Contraseña</label>
-        <input v-model="password" type="password" class="p-2 rounded-full border" required />
+        <label class="text-start text-(--kälm-dark) hidden">Contraseña</label>
+        <input v-model="password" type="password" placeholder="Contraseña"  class="text-(--kälm-text) p-3 bg-transparent rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) text-md" required />
 
-        <BtnLight type="submit" class="mt-4 w-70 mx-auto">Crear</BtnLight>
+        <BtnMain type="submit" class="mt-1 mx-auto w-full">Iniciar sesión</BtnMain>
 
         <p v-if="error" class="text-red-600 mt-2">{{ error }}</p>
         <p v-if="success" class="text-green-600 mt-2">{{ success }}</p>
       </form>
+    </div>
 
-      <p class="mt-4 text-sm text-gray-700">
-        ¿Ya tienes cuenta?
-        <RouterLink to="/login" class="text-[#37A0AF] font-bold">Ingresar</RouterLink>
-      </p>
+    <div class="w-full mx-auto">
+        <p class="decorated text-(--kälm-text) text-sm mb-3">Ya tengo cuenta</p>
+        <BtnSecondary class="w-full"><RouterLink to="/register">Iniciar sesión</RouterLink></BtnSecondary>
     </div>
   </section>
 </template>
@@ -30,12 +29,12 @@
 <script>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import MainTitle from '../components/MainTitle.vue';
-import BtnLight from '../components/BtnLight.vue';
+import BtnMain from '../components/BtnMain.vue';
+import BtnSecondary from '../components/BtnSecondary.vue';
 
 export default {
   name: 'Register',
-  components: { MainTitle, BtnLight },
+  components: {BtnMain, BtnSecondary},
   setup() {
     const name = ref('');
     const email = ref('');

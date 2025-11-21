@@ -1,7 +1,7 @@
 <template>
   <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
     <div
-      class="h-4 bg-[#37A0AF] transition-all duration-300"
+      class="h-4 bg-(--kälm-light) transition-all duration-300"
       :style="{ width: porcentaje + '%' }"
     ></div>
   </div>

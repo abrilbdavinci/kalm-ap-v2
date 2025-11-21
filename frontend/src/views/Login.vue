@@ -1,24 +1,24 @@
 <template>
-  <section class="w-3xl">
-    <MainTitle>Iniciar sesión</MainTitle>
-    <div class="w-full h-120 mx-auto mt-5 p-10 bg-white/40 backdrop-blur-lg rounded-xl shadow-lg">
+  <section class="w-2xl">
+    <img src="../../src/assets/img/logo-kalm.svg" alt="logo Kälm" class="h-25 mx-auto mt-20 mb-5">
+    <div class="w-full h-120 mx-auto mt-5">
       <form @submit.prevent="login" class="flex flex-col gap-3 my-10">
-        <label class="text-start text-[#306067]">Email</label>
-        <input v-model="email" type="email" class="p-2 rounded-full border" required />
+        <label class="text-start text-(--kälm-dark) hidden">Email</label>
+        <input v-model="email" type="email" placeholder="Email" class="text-(--kälm-text) p-3 rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) focus:background-transparent text-md" required />
 
-        <label class="text-start text-[#306067]">Contraseña</label>
-        <input v-model="password" type="password" class="p-2 rounded-full border" required />
-        <RouterLink to="/pswrd-restore" class="text-[#37A0AF] text-start font-bold">Olvidé la contraseña</RouterLink>
+        <label class="text-start text-(--kälm-dark) hidden">Contraseña</label>
+        <input v-model="password" type="password" placeholder="Contraseña" class="text-(--kälm-text) p-3 bg-transparent rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) text-md" required />
 
-        <BtnLight type="submit" class="mt-4 w-70 mx-auto">Ingresar</BtnLight>
+        <BtnMain type="submit" class="mt-1 mx-auto w-full">Iniciar sesión</BtnMain>
+        <RouterLink to="/pswrd-restore" class="text-(--kälm-text) text-center font-bold text-sm">Olvidé la contraseña</RouterLink>
 
         <p v-if="error" class="text-red-600 mt-2">{{ error }}</p>
       </form>
+    </div>
 
-      <p class="mt-4 text-sm text-gray-700">
-        ¿No tiene cuenta?
-        <RouterLink to="/register" class="text-[#37A0AF] font-bold">Registrarse</RouterLink>
-      </p>
+    <div class="w-full mx-auto">
+        <p class="decorated text-(--kälm-text) text-sm mb-3">No tengo cuenta</p>
+        <BtnSecondary class="w-full"><RouterLink to="/register">Crear cuenta</RouterLink></BtnSecondary>
     </div>
   </section>
 </template>
@@ -28,11 +28,12 @@ import { ref } from 'vue';
 import { currentUser } from '../main';
 import { useRouter } from 'vue-router';
 import MainTitle from '../components/MainTitle.vue';
-import BtnLight from '../components/BtnLight.vue';
+import BtnMain from '../components/BtnMain.vue';
+import BtnSecondary from '../components/BtnSecondary.vue';
 
 export default {
   name: 'Login',
-  components: { MainTitle, BtnLight },
+  components: { MainTitle, BtnMain, BtnSecondary },
   setup() {
     const email = ref('');
     const password = ref('');
@@ -68,3 +69,19 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.decorated {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.decorated::before,
+.decorated::after {
+  content: "";
+  color: var(--kälm-dark);
+  flex: 1 1 0;
+  height: 1px;
+  background: currentColor;
+}
+</style>

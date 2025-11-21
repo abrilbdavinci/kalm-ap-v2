@@ -6,9 +6,6 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Resultado from '../views/Resultado.vue';
 import { currentUser } from '../main.js';
-import About from "../views/About.vue";
-import Contact from "../views/Contact.vue";
-import Plans from "../views/Plans.vue";
 import Perfil from '../views/Perfil.vue';
 
 const authGuard = (to, from, next) => {
@@ -21,13 +18,10 @@ const authGuard = (to, from, next) => {
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/tests", component: Tests, beforeEnter: authGuard },
-  { path: "/tests/:id", component: TestDetail, props: true, beforeEnter: authGuard },
-  { path: "/login", component: Login },
-  { path: "/register", component: Register },
-  { path: "/about", component: About },
-  { path: "/contacto", component: Contact },
-  { path: "/planes", component: Plans },
+  { path: "/tests", component: Tests, beforeEnter: authGuard, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
+  { path: "/tests/:id", component: TestDetail, props: true, beforeEnter: authGuard, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
+  { path: "/login", component: Login, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
+  { path: "/register", component: Register, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: '/resultado', component: Resultado, props: true, beforeEnter: authGuard },
   { path: '/perfil', name: 'Perfil', component: Perfil, props: true, beforeEnter: authGuard }
 ];

@@ -9,7 +9,7 @@
     <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full justify-items-center">
       <div v-for="test in tests" :key="test._id" class="flex flex-col items-center text-center gap-4 w-full">
         <!-- Título y descripción fuera de la card -->
-        <h2 class="text-lg md:text-xl font-semibold text-[#306067]">
+        <h2 class="text-lg md:text-xl font-semibold text-(--kälm-dark)">
           {{ test.title }}
         </h2>
         <p class="text-base md:text-lg text-gray-700">
@@ -31,7 +31,7 @@
             </div>
             <div v-else>
               <RouterLink :to="`/tests/${test.key}`">
-                <BtnLight class="w-50 py-2 font-bold">Iniciar Test</BtnLight>
+                <BtnSecondary class="w-50 py-2 font-bold">Iniciar Test</BtnSecondary>
               </RouterLink>
             </div>
           </template>
@@ -44,13 +44,13 @@
 
 <script>
 import TestCard from '../components/TestCard.vue';
-import BtnLight from '../components/BtnLight.vue';
+import BtnSecondary from '../components/BtnSecondary.vue';
 import BtnMain from '../components/BtnMain.vue';
 import MainTitle from '../components/MainTitle.vue';
 
 export default {
   name: 'Tests',
-  components: { TestCard, BtnLight, MainTitle, BtnMain },
+  components: { TestCard, BtnSecondary, MainTitle, BtnMain },
   data() {
     return {
       tests: [],

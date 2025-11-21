@@ -2,11 +2,8 @@
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { currentUser } from '../main.js'; // <-- importamos el usuario global
-import MainTitle from "../components/MainTitle.vue";
-import SubTitle from "../components/SubTitle.vue";
 import BtnDark from "../components/BtnDark.vue";
-import BtnLight from "../components/BtnLight.vue";
-import BtnMain from "../components/BtnMain.vue";
+import BtnSecondary from "../components/BtnSecondary.vue";
 
 const router = useRouter();
 const loading = ref(true);
@@ -122,7 +119,7 @@ const rehacerTest = async (testKey) => {
         <!-- Botones -->
         <div class="flex flex-col w-50 gap-2">
           <BtnDark @click="router.push('/editar-perfil')">Editar mi perfil</BtnDark>
-          <!-- <BtnLight>Seguir</BtnLight> -->
+          <!-- <BtnSecondary>Seguir</BtnSecondary> -->
         </div>
   
         <!-- Fecha creación -->
@@ -137,7 +134,7 @@ const rehacerTest = async (testKey) => {
   
         <!-- Panel de test (tu lógica original) -->
         <section v-if="!loading && !error" class="bg-white/20 backdrop-blur-[20px] border border-white/30 rounded-xl p-6">
-          <h3 class="text-lg font-semibold text-[#306067] mb-4">Mis tests</h3>
+          <h3 class="text-lg font-semibold text-(--kälm-dark) mb-4">Mis tests</h3>
   
           <div class="grid gap-6 md:grid-cols-2">
             <div 
@@ -151,7 +148,7 @@ const rehacerTest = async (testKey) => {
                 <p class="text-sm">
                   <strong>Resultado:</strong> {{ getResultadoByTestKey(testKey).resultadoId.resultado }}
                 </p>
-                <BtnLight class="mt-4 w-full" @click="rehacerTest(testKey)">Rehacer test</BtnLight>
+                <BtnSecondary class="mt-4 w-full" @click="rehacerTest(testKey)">Rehacer test</BtnSecondary>
               </template>
   
               <template v-else>
