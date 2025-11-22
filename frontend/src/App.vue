@@ -34,7 +34,7 @@ export default {
     <div class="flex flex-col min-h-screen header-bg pt-5 drawer-content">
       <Header v-if="showHeader" />
       <Navbar v-if="showNavbar" />
-      <main class="flex grow container mx-auto p-4 text-center justify-center">
+      <main class="flex grow container mx-auto text-center justify-center">
         <RouterView />
       </main>
       <Footer v-if="showFooter" class="hidden min-[1061px]:flex justify-center items-center"></Footer>
