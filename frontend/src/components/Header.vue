@@ -39,7 +39,9 @@ export default {
 
     <!-- BOTONES DERECHA (solo iconos) -->
     <div class="flex items-center gap-6 text-teal-600 text-2xl">
-      
+      <label for="my-drawer-1" class="cursor-pointer" aria-label="open sidebar">
+        <img src="./../assets/img/pfp.png" alt="User" class="h-8 w-8 rounded-full object-cover" />
+      </label>
     </div>
   </header>
 </template>

@@ -26,7 +26,7 @@ export default {
 
 <template>
   <nav
-    class="fixed z-50 flex items-center justify-evenly bg-white shadow-[0_8px_30px_rgba(55,160,175,0.3)] p-3 w-full left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out
+    class="fixed z-50 flex items-center justify-evenly bg-white rounded-t-3xl shadow-[0_8px_30px_rgba(55,160,175,0.3)] p-3 w-full left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out
     max-[1060px]:bottom-0 
     max-[1060px]:pt-5 px-7 pb-7
     max-[1060px]:justify-center"
