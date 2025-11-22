@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Tests from "../views/Tests.vue";
 import TestDetail from "../views/TestDetail.vue"; 
 import Login from "../views/Login.vue";
+import LogOrReg from "../views/LogOrReg.vue";
 import Register from "../views/Register.vue";
 import Resultado from '../views/Resultado.vue';
 import { currentUser } from '../main.js';
@@ -18,6 +19,7 @@ const authGuard = (to, from, next) => {
 
 const routes = [
   { path: "/", component: Home },
+  { path: "/LoginOrRegister", component: LogOrReg, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: "/tests", component: Tests, beforeEnter: authGuard, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: "/tests/:id", component: TestDetail, props: true, beforeEnter: authGuard, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: "/login", component: Login, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },

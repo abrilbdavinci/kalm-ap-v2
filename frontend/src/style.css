@@ -70,6 +70,21 @@ body {
   background-color: #ffffff;
 }
 
+/*LOGIN Y REGISTER*/
+.decorated {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.decorated::before,
+.decorated::after {
+  content: "";
+  color: var(--kälm-dark);
+  flex: 1 1 0;
+  height: 1px;
+  background: currentColor;
+}
+
 .glass{
   background-color: color-mix(in srgb, var(--c-glass) 12%, transparent);
   backdrop-filter: blur(8px) url(.navbar-style) saturate(var(--saturation));

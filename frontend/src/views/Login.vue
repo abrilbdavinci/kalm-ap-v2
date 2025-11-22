@@ -1,5 +1,5 @@
 <template>
-  <section class="w-2xl">
+  <section class="w-2xl p-4 flex flex-col justify-around">
     <img src="../../src/assets/img/logo-kalm.svg" alt="logo Kälm" class="h-25 mx-auto mt-20 mb-5">
     <div class="w-full h-120 mx-auto mt-5">
       <form @submit.prevent="login" class="flex flex-col gap-3 my-10">
@@ -70,18 +70,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.decorated {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.decorated::before,
-.decorated::after {
-  content: "";
-  color: var(--kälm-dark);
-  flex: 1 1 0;
-  height: 1px;
-  background: currentColor;
-}
-</style>

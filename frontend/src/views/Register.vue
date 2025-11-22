@@ -1,5 +1,5 @@
 <template>
-  <section class="w-2xl">
+  <section class="w-2xl p-4 flex flex-col justify-around">
     <img src="../../src/assets/img/logo-kalm.svg" alt="logo Kälm" class="h-25 mx-auto mt-20 mb-5">
     <div class="w-full h-120 mx-auto mt-5">
       <form @submit.prevent="register" class="flex flex-col gap-3 my-10">
@@ -21,7 +21,7 @@
 
     <div class="w-full mx-auto">
         <p class="decorated text-(--kälm-text) text-sm mb-3">Ya tengo cuenta</p>
-        <BtnSecondary class="w-full"><RouterLink to="/register">Iniciar sesión</RouterLink></BtnSecondary>
+        <BtnSecondary class="w-full"><RouterLink to="/login">Iniciar sesión</RouterLink></BtnSecondary>
     </div>
   </section>
 </template>
