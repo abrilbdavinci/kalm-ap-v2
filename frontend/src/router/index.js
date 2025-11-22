@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Tests from "../views/Tests.vue";
+import TestsInicio from "../views/TestsInicio.vue";
 import TestDetail from "../views/TestDetail.vue"; 
 import Login from "../views/Login.vue";
 import LogOrReg from "../views/LogOrReg.vue";
@@ -21,6 +22,7 @@ const routes = [
   { path: "/", component: Home },
   { path: "/LoginOrRegister", component: LogOrReg, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: "/tests", component: Tests, beforeEnter: authGuard, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
+  { path: "/testsInicio", component: TestsInicio, beforeEnter: authGuard, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: "/tests/:id", component: TestDetail, props: true, beforeEnter: authGuard, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: "/login", component: Login, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },
   { path: "/register", component: Register, meta: { hideHeader: true, hideNavbar: true, hideFooter: true } },

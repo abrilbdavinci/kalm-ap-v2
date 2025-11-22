@@ -57,7 +57,7 @@ main p{
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   font-family: 'Mulish', sans-serif;
   font-weight: bolder;
   /*NAVBAR VARIABLES*/
@@ -68,6 +68,8 @@ body {
   --glass-reflex-dark: 1;
   --glass-reflex-light: 1;
   background-color: #ffffff;
+  /* Prevent accidental horizontal scroll from 100vw / off-by-one elements */
+  overflow-x: hidden;
 }
 
 /*LOGIN Y REGISTER*/

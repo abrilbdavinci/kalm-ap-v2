@@ -1,6 +1,6 @@
 <template>
   <section class="w-2xl p-4 flex flex-col justify-around">
-    <img src="../../src/assets/img/logo-kalm.svg" alt="logo Kälm" class="h-25 mx-auto mt-20 mb-5">
+    <img src="../../src/assets/img/logo-kalm.svg" alt="logo Kälm" class="h-25 mx-auto mt-15 mb-5">
     <div class="w-full h-120 mx-auto mt-5">
       <form @submit.prevent="register" class="flex flex-col gap-3 my-10">
         <label class="text-start text-(--kälm-dark) hidden">Nombre</label>
@@ -11,6 +11,9 @@
 
         <label class="text-start text-(--kälm-dark) hidden">Contraseña</label>
         <input v-model="password" type="password" placeholder="Contraseña"  class="text-(--kälm-text) p-3 bg-transparent rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) text-md" required />
+
+        <label class="text-start text-(--kälm-dark) hidden">Confirmar contraseña</label>
+        <input v-model="password" type="password" placeholder="Confirmar contraseña"  class="text-(--kälm-text) p-3 bg-transparent rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) text-md" required />
 
         <BtnMain type="submit" class="mt-1 mx-auto w-full">Crear cuenta</BtnMain>
 

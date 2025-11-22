@@ -1,34 +1,22 @@
 <template>
-  <section class="w-full flex flex-col items-center">
-    <MainTitle class="text-start">Tests</MainTitle>
-    <p>Completá todos los tests para obtener rutinas pensadas para vos.</p>
+  <section class="p-5 flex flex-col">
+    <div class="text-start mt-20 mb-30">
+      <span class="text-start text-sm text-(--kälm-light)">Pregunta 1</span>
+      <MainTitle class="text-start">¿Qué estás interesado en mejorar?</MainTitle>
+    </div>
 
     <div v-if="!token" class="text-red-600 text-lg">
       Debes iniciar sesión para ver los tests.
     </div>
 
     <div v-else class="flex flex-col gap-6 w-full justify-items-center">
-      <div class="flex flex-col items-center text-center gap-4 w-full">
-        <!-- TestCard solo contiene el botón -->
-        <TestCard :class="[
-          isTestDone(test.key) ? 'done-card' : '',
-          test.key === 'piel' ? 'card-piel' : '',
-          test.key === 'cabello' ? 'card-cabello' : ''
-        ]">
-
-          <template #button>
-            <div v-if="isTestDone(test.key)">
-              <BtnMain class="w-50 py-2 font-bold cursor-not-allowed border-none" disabled>
-                Test ya realizado
-              </BtnMain>
-            </div>
-            <div v-else>
-              <RouterLink :to="`/tests/${test.key}`">
-                <BtnSecondary class="w-50 py-2 font-bold border-none">{{ test.title }}</BtnSecondary>
-              </RouterLink>
-            </div>
-          </template>
-        </TestCard>
+      <div class="flex flex-col items-center text-center gap-4 wrap justify-center">
+        <RouterLink :to="/tests/" class="bg-white/20 w-full p-6 py-10 items-center shadow-lg rounded-xl mb-4 flex justify-center">
+          <BtnSecondary class="py-2 flex font-bold border-none">Cuidado de la piel</BtnSecondary>
+        </RouterLink>
+        <RouterLink :to="/tests/" class="bg-white/20 w-full p-6 py-10 items-center shadow-lg rounded-xl mb-4 flex justify-center">
+          <BtnSecondary class="py-2 font-bold border-none">Cuidado del cabello</BtnSecondary>
+        </RouterLink>
       </div>
     </div>
   </section>
@@ -42,7 +30,7 @@ import BtnMain from '../components/BtnMain.vue';
 import MainTitle from '../components/MainTitle.vue';
 
 export default {
-  name: 'Tests',
+  name: 'TestsInicio',
   components: { TestCard, BtnSecondary, MainTitle, BtnMain },
   data() {
     return {

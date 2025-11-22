@@ -30,7 +30,6 @@ export default {
 <template>
   <div class="drawer drawer-end">
     <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
-
     <div class="flex flex-col min-h-screen header-bg pt-5 drawer-content">
       <Header v-if="showHeader" />
       <Navbar v-if="showNavbar" />

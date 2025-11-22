@@ -96,7 +96,7 @@ const rehacerTest = async (testKey) => {
   
         <!-- Datos Usuario -->
         <h2 class="text-xl font-semibold flex items-center gap-1">
-          {{ currentUser?.name || "Usuario ✨" }}
+          {{ currentUser?.name }}
         </h2>
         <p class="text-sm text-gray-600">mi biografía re chu</p>
   
@@ -126,11 +126,6 @@ const rehacerTest = async (testKey) => {
         <p class="text-xs text-gray-500 mt-4">Miembro desde {{ fechaCreacion }}</p>
   
       </aside>
-  
-      <!-- === COLUMNA DERECHA — CONTENIDO === -->
-      <section class="w-full lg:w-[65%] flex flex-col gap-4">
-  
-        
   
         <!-- Panel de test (tu lógica original) -->
         <section v-if="!loading && !error" class="bg-white/20 backdrop-blur-[20px] border border-white/30 rounded-xl p-6">
