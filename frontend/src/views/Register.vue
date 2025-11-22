@@ -12,7 +12,7 @@
         <label class="text-start text-(--kälm-dark) hidden">Contraseña</label>
         <input v-model="password" type="password" placeholder="Contraseña"  class="text-(--kälm-text) p-3 bg-transparent rounded-xl border-(--kälm-light) border-2 placeholder-(--kälm-lighter) focus:outline-(--kälm-light) text-md" required />
 
-        <BtnMain type="submit" class="mt-1 mx-auto w-full">Iniciar sesión</BtnMain>
+        <BtnMain type="submit" class="mt-1 mx-auto w-full">Crear cuenta</BtnMain>
 
         <p v-if="error" class="text-red-600 mt-2">{{ error }}</p>
         <p v-if="success" class="text-green-600 mt-2">{{ success }}</p>
