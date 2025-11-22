@@ -170,7 +170,6 @@ const rehacerTest = async (testKey) => {
       <!-- Loading / Error -->
       <p v-if="loading" class="text-gray-500 text-lg mt-6 text-center w-full">Cargando perfil...</p>
       <p v-else-if="error" class="text-red-500 text-lg mt-6 text-center w-full">{{ error }}</p>
-  
-    </section>
+
   </template>
   
